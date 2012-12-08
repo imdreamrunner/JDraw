@@ -7,3 +7,10 @@ Todos
 -------
 
 * Finishing this document
+
+License
+-------
+
+JDraw is published under the MIT License.
+
+http://opensource.org/licenses/mit-license.php
