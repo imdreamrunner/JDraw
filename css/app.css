@@ -1,0 +1,165 @@
+html, body, div, span, h1, h2, a, img, input, ul, li, textarea{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    background: url('../img/bg.png');
+}
+#draw-app{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -300px 0 0 -500px;
+    width: 1000px;
+    height: 600px;
+}
+h1{
+    position: absolute;
+    display: block;
+    background: url('../img/logo.png');
+    width: 600px;
+    height: 75px;
+    margin: 50px 0 0 200px;
+    text-indent: -9999px;
+}
+#current-item{
+    position: absolute;
+    background: #FFF;
+    width: 400px;
+    height: 80px;
+    font-size: 42px;
+    text-align: center;
+    line-height: 80px;
+    overflow: hidden;
+    margin: 240px 0 0 300px;
+    box-shadow: 0 0 12px #AAA;
+    border-radius: 8px;
+}
+#control-button{
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    font-size: 36px;
+    margin: 390px 0 0 400px;
+    color: #999;
+    border: 2px solid #FFF;
+    border-radius: 30px;
+    background: #EEE;
+}
+#control-button:hover{
+    color: #666;
+    border: 2px solid #AAA;
+}
+#div-draw-list{
+    position: absolute;
+    margin: 120px 0 0 30px;
+    height: 400px;
+    width: 170px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#ul-draw-list{
+    width: 150px;
+}
+#ul-draw-list li{
+    list-style: none;
+    height: 26px;
+}
+#ul-draw-list:first-child .person-view{
+    margin-top: 0 !important;
+}
+.person-view{
+    position: absolute;
+    text-align: center;
+    width: 148px;
+    background: #F4F4F4;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #DDD;
+    margin-top: -1px;
+    color: #999999;
+    cursor: default;
+    z-index: 0;
+}
+.current-person{
+    border: 1px solid #36bed2 !important;
+    background: #dbeafa;
+    color: #0f5ca8 !important;
+    z-index: 2 !important;
+}
+.selected-person{
+    color: #CCC;
+    z-index: 1;
+}
+#form-edit-list{
+    position: absolute;
+    margin: 120px 0 0 30px;
+    width: 170px;
+    display: none;
+}
+#text-draw-list{
+    float: left;
+    color: #666;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    width: 170px;
+    height: 400px;
+    border: none;
+}
+#edit-draw-items{
+    float: left;
+    width: 100px;
+}
+#cancel-edit-items{
+    float: left;
+    width: 70px;
+}
+#ul-selected-list{
+    position: absolute;
+    margin: 120px 0 0 800px;
+}
+#ul-selected-list li{
+    list-style: none;
+}
+.selected-view{
+    background: #FFF;
+    height: 25px;
+    width: 170px;
+    margin-bottom: 5px;
+}
+.selected-view .name{
+    height: 25px;
+    width: 150px;
+    line-height: 25px;
+    text-align: center;
+}
+.selected-view .delete{
+    position: absolute;
+    margin: 4px 0 0 150px;
+    border: none;
+    height: 16px;
+    width: 16px;
+    color: #FFF;
+    background: #AAA;
+    line-height: 16px;
+    border-radius: 8px;
+    text-align: center;
+}
+.selected-view .delete:hover{
+    background: #666;
+}
+footer{
+    position: absolute;
+    width: 600px;
+    margin: 550px 0 0 200px;
+    text-align: center;
+    font-size: 12px;
+    color: #999
+}
+footer span{
+    color: #CCC;
+}
