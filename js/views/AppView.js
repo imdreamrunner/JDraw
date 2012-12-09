@@ -10,7 +10,9 @@ var app = app || {};
       'click #edit-draw-items': 'editPersons',
       'click #control-button': 'draw',
       'click #cancel-edit-items': 'cancelEdit',
-      'dblclick #ul-draw-list': 'editList'
+      'dblclick #ul-draw-list': 'editList',
+      'click #delete-all-selected': 'deleteAll',
+      'click #full-screen': 'fullScreen'
     },
 
     initialize: function() {
@@ -86,6 +88,25 @@ var app = app || {};
       var totalPerson = this.collection.unselected().length;
       var randomInt = _.random(0, totalPerson - 1);
       return this.collection.unselected()[randomInt];
+    },
+
+    deleteAll: function(){
+      _.each(this.collection.selected(), function(person){
+        person.set({'selected': false});
+      });
+    },
+
+    fullScreen: function(){
+      var appElem = document.documentElement;
+      if (appElem.requestFullScreen) {
+        appElem.requestFullScreen();
+      } else if (appElem.mozRequestFullScreen) {
+        appElem.mozRequestFullScreen();
+      } else if (appElem.webkitRequestFullScreen) {
+        appElem.webkitRequestFullScreen();
+      } else{
+        alert('Your browser does not support HTML5 full screen. Please press F11 to enter full screen mode.')
+      }
     }
   });
 })(jQuery);

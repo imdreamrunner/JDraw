@@ -1,4 +1,4 @@
-html, body, div, span, h1, h2, a, img, input, ul, li, textarea{
+html, body, div, span, h1, h2, a, img, input, ul, li, textarea, p{
     margin:0;
     padding:0;
 }
@@ -6,7 +6,7 @@ body{
     font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
     font-size: 14px;
     color: #666;
-    background: url('../img/bg.png');
+    background: url('../img/bg.png') repeat;
 }
 #draw-app{
     position: absolute;
@@ -15,6 +15,9 @@ body{
     margin: -300px 0 0 -500px;
     width: 1000px;
     height: 600px;
+}
+#full-screen{
+    display: none;
 }
 h1{
     position: absolute;
@@ -118,9 +121,15 @@ h1{
     float: left;
     width: 70px;
 }
-#ul-selected-list{
+#selected-list{
     position: absolute;
     margin: 120px 0 0 800px;
+    width: 190px;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#ul-selected-list{
 }
 #ul-selected-list li{
     list-style: none;

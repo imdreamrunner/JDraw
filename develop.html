@@ -25,11 +25,17 @@
     </form>
   </section>
   <section id="selected-list">
+    <div id="selected-list-title">
+      Chosen Ones
+      <input id="delete-all-selected" type="button" value="Delete All" />
+    </div>
     <ul id="ul-selected-list"></ul>
   </section>
   <footer>
-    &copy; 2012 Dream Runner. <span>Built 2012081201.</span>
+    <p>Press F11 to enter full screen mode.</p>
+    <p>&copy; 2012 Dream Runner. <span>Built 2012081201.</span></p>
   </footer>
+  <input id="full-screen" type="button" value="Full Screen" />
 </section>
 <script type="text/template" id="person-template">
   <div class="person-view<% if(selected){ %> selected-person<% } %><% if(current){ %> current-person<% } %>">
